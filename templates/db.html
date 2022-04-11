@@ -1,0 +1,17 @@
+{% block page %}
+<div>
+    {%for news in data%}
+<div>
+    <h2> {{ news.title }}: </h2> 
+    <p>  {{ news.notice }} </p>
+
+
+</div>
+    <h2> {{ i }}: </h2> 
+
+    {%endfor%}
+
+</div>
+{{ datab }}
+
+{% endblock %}

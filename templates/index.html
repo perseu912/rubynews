@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% block styles %}
+        <link rel='stylesheet' href='{{ url_for("static", filename="css/style.css") }}'/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        {% block title %}<title> CaSertão </title>{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Your page content -->
+        {% block content %}
+        <nav class="navbar navbar-expand-lg navbar-light text-light">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light" href="#" id='home'>CaSertão</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" text-align='left' id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class='nav-item active'>
+                    
+                    <input id='query_porn' class='search_porn_input' type="text" placeholder="search">
+                    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><span>Casa</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span>Notícias</span></a>
+                  </li>
+          
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span>Informações</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><span>Catálogo de Asteroides</span></a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/insta_posts"><span>Instagram Posts</span></a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+        {% endblock %}
+
+        {% block page %}
+
+        {% endblock %}
+
+        {% block footer %}
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <br><br><br><br><br>
+            <!-- Footer -->
+            <footer class="page-footer font-small blue pt-4">
+            <a alt='Fork me on GitHub'  href='https://github.com/perseu912/casertao'><img src='{{url_for("static",filename="img/git.png")}}' height="50px" width="50px" title='Fork me on GitHub' />
+            </a>
+            <div class="footer-copyright text-center py-3">© 2021 gpftc IF-Sertão <span id='server_status'></span></div>
+            <!-- Copyright -->
+            </footer> 
+        {% endblock %}
+
+  
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+
+            <script src='{{ url_for("static", filename="js/jquery.min.js") }}'></script>
+            <script src='{{url_for("static",filename="js/socket.js")}}' integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+            <script type="text/javascript" charset="utf-8">
+            username=localStorage.getItem('username')
+
+                var socket = io();
+                
+                socket.on('connect', function() {
+                    socket.emit('connected', {'username':username,'text': 'I\'m connected!'});
+                $('#server_status').html(`<i title='Server Online' class="material-icons green">brightness_1</i>`)
+                });
+                socket.on('disconnect',()=>{
+                    $('#server_status').html(`<i title='Server Offline' class="material-icons red">brightness_1</i>`)
+                });
+
+                window.onbeforeunload = function () {
+                    socket.emit('disconnected', {'username':username,'text':`I'm exit`});
+                }
+            </script>
+        {% endblock %}
+
+    </body>
+</html>

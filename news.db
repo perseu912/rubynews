@@ -1,0 +1,12 @@
+        echo: off
+         eqp: off
+     explain: auto
+     headers: on
+        mode: column
+   nullvalue: ""
+      output: news.db
+colseparator: "|"
+rowseparator: "\n"
+       stats: off
+       width: 
+    filename: news

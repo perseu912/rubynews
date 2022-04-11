@@ -1,0 +1,78 @@
+body{
+    background-color: white;
+  }
+    @font-face {
+      font-family: Charter;
+      src: url("Outfit-VariableFont_wght.ttf");
+    }
+
+
+    *{
+      margin:0,0;
+      padding:0,0; 
+    }
+    .page-footer{
+      background: rgb(8, 3, 102);
+      position: relative;
+      color:white;
+      padding-bottom: 50px;
+      font-family: 'Roboto';
+    }
+    span{
+      color:white;
+    }
+    .navbar{
+    background: rgb(8, 3, 102);
+    font-family: 'Charter';
+    color:white;
+    }
+    .orange{
+      color: orange;
+    }
+    .video_porn{
+      text-align: center;
+    }
+    .thumb_porn{
+      height: 10%;
+      width: 92%;
+    }
+
+    .navbar-collapse{
+      align-items: left;
+    }
+    .bt_search{
+      border-radius: 10px 10px;
+      background-color: orangered;
+      border:1px solid;
+    }
+    .search_porn_input{
+      border:solid 1px;
+      border-radius: 10px;
+      border-color: white;
+      padding: 0;
+    }
+    .frame_video{
+      text-align: center;
+      height: 209%;
+      width: 100%;
+    }
+    .green{
+      color:green;
+    }
+    .red{
+      color:red;
+    }
+    .black{
+      color:black;
+    }
+    .bold{
+      font-weight: bold;
+    }
+
+    p{
+      font-family: 'Roboto';
+      color:white;
+      font-size:99%;
+      margin:0;
+      
+    }

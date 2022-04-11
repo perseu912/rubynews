@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+{% block title %}<title>InstaPosts</title>{% endblock %}
+
+{% block page%}
+<img src='{{ ca["graphql"]["user"]["profile_pic_url"]}}'>
+<p class='black'><span font-weight='bold' size='25px' class='black bold' >nome da página:</span> {{ ca["graphql"]["user"]["full_name"] }}</p>
+<p class='black'><span font-weight='bold' size='25px' class='black bold' >número de seguidores:</span> {{ ca["graphql"]["user"]["edge_followed_by"]['count'] }}</p>
+
+{% endblock %}

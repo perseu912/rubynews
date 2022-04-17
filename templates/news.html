@@ -1,8 +1,17 @@
 {% extends "index.html" %}
-{% block title %}<title>InstaPosts</title>{% endblock %}
+{% block title %}<title> {{ news.title }} </title>{% endblock %}
 
 
-{% block pagi %}
+{% block page %}
+
+
+<div class="news0">
+    <h1> {{ news.title }} </h1> 
+
+<small>upload: {{ news.date }}</small>
+<br>
+    <p color="'black">  {{ news.notice }} </p>
+
 
 <div></div>
 

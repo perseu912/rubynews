@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block title %}<title>Admin Page</title>{% endblock %}
+
+
+{% block page %}
+
+<div id="publish" class='publish0'>
+<form action="/add_news" method="post">
+
+    <p>título:</p>
+    <input id="title" name='title' placeholder='digite aqui o título da notícia'>
+    <br>
+    <p>Notícia:</p>
+    <textarea id="'news" clas="'news0" name="news" cols="40" placeholder="escreva a notícia..." rows="5"></textarea>
+
+    <br>
+    <hr>
+    <input type="password" name="kei" placeholder="kei" required>
+    <br>
+    <button type="'submit">publicar</button>
+
+</form>
+</div>
+
+{% endblock %}

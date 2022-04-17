@@ -2,12 +2,14 @@
 <div>
     {%for news in data%}
 <div>
-    <h2> {{ news.title }}: </h2> 
-    <p>  {{ news.notice }} </p>
+    <h1> {{ news.title }} </h1> 
+
+<small>upload: {{ news.date }}</small>
+<br>
+    <a href="/news/{{ news.url_news }}">  {{ news.notice[:40]+'...' }} </a>
 
 
-</div>
-    <h2> {{ i }}: </h2> 
+
 
     {%endfor%}
 

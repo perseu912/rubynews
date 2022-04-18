@@ -5,16 +5,6 @@ from flask_login import UserMixin
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/ruby_news.db'
 db = SQLAlchemy(app)
 
-# app.config['MONGODB_SETTINGS'] = {
-#     'db':'ruby_news',
-#     'host':'localhost',
-#     'port':27017
-# }
-
-# db = MongoEngine()
-# db.init_app(app)
-
-# db.session.commit()
 
 
 
@@ -42,11 +32,4 @@ class AdminUser(UserMixin,db.Model):
         password = db.Column(db.String(40),unique=False,nullable=False)
       #  name = db.Column(db.String(10),unique=False,nullable=False)
 
-db.create_all()
-
-# class News(db.Document):
-#     title = db.StringField()
-#     notice = db.StringField()
-#     idNews = db.StringField()
-
-
+#db.create_all()

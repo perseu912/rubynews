@@ -12,7 +12,7 @@ body{
       padding:0,0; 
     }
     .page-footer{
-      background: rgb(8, 3, 102);
+      background: rgb(172, 8, 8);
       position: relative;
       color:white;
       padding-bottom: 50px;
@@ -22,7 +22,7 @@ body{
       color:white;
     }
     .navbar{
-    background: rgb(8, 3, 102);
+    background: rgb(140, 1, 1);
     font-family: 'Charter';
     color:white;
     }
@@ -90,4 +90,8 @@ body{
 .news0 p{
   color:black;
 
+}
+
+.news_div{
+  width:60%;
 }

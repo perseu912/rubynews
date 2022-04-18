@@ -13,6 +13,8 @@ flask-pymongo = "*"
 flask-sqlalchemy = "*"
 mongoengine = "*"
 flask-mongoengine = "*"
+flask-admin = "*"
+flask-login = "*"
 
 [dev-packages]
 

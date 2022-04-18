@@ -7,8 +7,7 @@ a site for news from now in the world
 - Foi construído para ser um site de notícias monetizado por anuncíos google
 - Não possui nenhuma API aberta ou a disposição
 - O seu banco de dados não possui nenhuma informação sigilosa e nem está presente
-- O projeto está sobre licença MIT, então faça bom proveito dele
-  
+
 ### como foi construído:
 - O seu Back End foi inteiramente contruído em python 3.9+
 - O framework utilizado foi o Flask
